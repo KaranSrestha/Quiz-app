@@ -42,13 +42,14 @@ app.get("/questions", function(req, res){
 })
 
 app.post("/questions", function(req, res){
-  //console.log(req.body);
+  console.log(req.body);
     const selectedOption = req.body.option;
-    //console.log(selectedOption);
+    console.log(selectedOption);
     if(selectedOption == correctOpt[Qno-1]){
-        //console.log(correctOpt[Qno-1]);
+        console.log(correctOpt[Qno-1]);
         score++;
         Qno++;
+        console.log(score);
     }else{
         Qno++;
     }
@@ -56,11 +57,6 @@ app.post("/questions", function(req, res){
       setTimeout(()=>{
         res.render("end", {score: score});
       },1000); 
-      Qno=1;
-      score=0;
-      questions=[];
-      options=[];
-      correctOpt=[];
     }else{
       setTimeout(function(){
         res.redirect("/questions");
@@ -68,6 +64,11 @@ app.post("/questions", function(req, res){
     }
 });
 app.post("/", function(req, res){
+    score=0;
+    Qno=1;
+    questions=[];
+    options=[];
+    correctOpt=[];
     const category = req.body.category;
     difficulty = req.body.difficulty;
     const url = `https://opentdb.com/api.php?amount=11&difficulty=${difficulty}&category=${category}&type=multiple`;
