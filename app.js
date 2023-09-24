@@ -99,6 +99,6 @@ app.post("/home", function(req, res){
   }, 1000);
 })
 
-app.listen(5500, function() { 
-    console.log("Server is up at 5500");
+app.listen(process.env.PORT||3000, function() { 
+    console.log("Server is up at 3000");
 });
