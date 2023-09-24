@@ -10,7 +10,9 @@ const bodyParser = require("body-parser");
 const axios = require("axios");
 const { error } = require("console");
 const he = require("he");
+const dotenv = require("dotenv");
 
+dotenv.config();
 
 app.use(bodyParser.urlencoded({extended: false}));
 
