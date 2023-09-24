@@ -30,6 +30,12 @@ body{
         border-radius: 0px;
     }
 }
+@media (max-height: 600px){
+    .outer{
+        background: transparent;
+        box-shadow: none;
+    }
+}
 h2{
     margin: 23px;
     padding-top: 19px;
@@ -43,7 +49,7 @@ h2{
 form{
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
     font-size: 1.5rem;
     top: 10%;
 
@@ -87,3 +93,24 @@ select{
     color: #FFF5E0;
     cursor: pointer;
 }
+/* Change the scrollbar's width, color, and radius */
+::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+  }
+  
+  /* Change the thumb (the draggable part) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Color of the thumb */
+    border-radius: 5px; /* Radius of the thumb */
+  }
+  
+  /* Change the track (the non-draggable part) of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color of the track */
+  }
+  
+  /* Change the corners of the scrollbar */
+  ::-webkit-scrollbar-corner {
+    background-color: transparent; /* Color of the scrollbar corners */
+  }
+  
