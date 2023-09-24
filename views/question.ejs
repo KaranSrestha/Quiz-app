@@ -1,0 +1,27 @@
+<%- include("partials/header") -%>
+<body>
+    <h2>Question <%= Qno %>. <%= question %></h2>
+    <p>Choose the correct option.</p>
+    <form action="/questions" method="post">
+    <ul>
+        <li>
+            <input type="radio" name="option" id="opt1" class="opt" value="<%= opt1 %>">
+            <label for="opt1" class="custom-radio"><%= opt1 %></label>
+        </li>
+        <li>
+            <input type="radio" name="option" id="opt2" class="opt" value="<%= opt2 %>">
+            <label for="opt2" class="custom-radio"><%= opt2 %></label>
+        </li>
+        <li>
+            <input type="radio" name="option" id="opt3" class="opt" value="<%= opt3 %>">
+            <label for="opt3" class="custom-radio"><%= opt3 %></label>
+        </li>
+        <li>
+            <input type="radio" name="option" id="opt4" class="opt" value="<%= opt4 %>">
+            <label for="opt4" class="custom-radio"><%= opt4 %></label>
+        </li>
+    </ul>
+
+        <button type="submit" class="btn">Next</button>        
+    </form>
+<%- include("partials/footer") -%>

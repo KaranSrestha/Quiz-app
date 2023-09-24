@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
+    <title>Quizi-Test your knowledge</title>
+</head>
+<body>
+    <div class="outer">
+        <header>
+            <h2>Let's get you setup for the quiz.</h2>
+        </header>
+        <form action="/" method="post">
+            <label for="category" class="cat">Choose a Category:</label>
+            <select name="category" id="category">
+                <option value="9">General Knowledge</option>
+                <option value="17">Science</option>
+                <option value="10">Books</option>
+                <option value="27">Animals</option>
+            </select>
+            <label for="difficulty" class="dif">Choose a difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Normal</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button type="submit" class="btn">Start Now</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
